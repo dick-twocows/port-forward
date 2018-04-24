@@ -1,7 +1,7 @@
 FROM node:4
 
-EXPOSE 80
+EXPOSE $LOCAL_PORT
 
 RUN npm install -g mapport
 
-CMD mapport 80 $REMOTE_HOST:$REMOTE_PORT
+CMD mapport $LOCAL_PORT $REMOTE_HOST:$REMOTE_PORT
